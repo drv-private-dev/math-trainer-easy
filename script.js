@@ -2,20 +2,39 @@
 let totalQuestions = 0;
 let correctAnswers = 0;
 let currentQuestion = {};
+let isGenerateAdditionExample = true;
 
 const correctSound = new Audio('correct.mp3');
 const wrongSound = new Audio('wrong.mp3');
 
 // Генерация нового примера
-function generateQuestion() {
-  const num1 = Math.floor(Math.random() * 10);
-  const num2 = Math.floor(Math.random() * 10);
-  currentQuestion = {
-    question: `${num1} + ${num2}`,
-    answer: num1 + num2,
-  };
+function generateQuestion(isGenerateAdditionExample) {
+  
+  if (isGenerateAdditionExample) {
+    currentQuestion = generateAdditionExample();  
+  } else {
+    currentQuestion = generateSubtractionExample();  
+  }
 
   document.getElementById("question").textContent = currentQuestion.question;
+}
+
+function generateAdditionExample() {
+  const num1 = Math.floor(Math.random() * 20) + 1;
+  const num2 = Math.floor(Math.random() * 20) + 1;
+  return {
+      question: `${num1} + ${num2}`,
+      answer: num1 + num2
+  };
+}
+
+function generateSubtractionExample() {
+  const num1 = Math.floor(Math.random() * 20) + 1;
+  const num2 = Math.floor(Math.random() * num1); // Убедимся, что результат положительный
+  return {
+      question: `${num1} - ${num2}`,
+      answer: num1 - num2
+  };
 }
 
 // Функция для проверки ответа
@@ -53,7 +72,8 @@ function checkAnswer() {
   updateStatistics();
 
   // Генерируем новый вопрос
-  generateQuestion();
+  isGenerateAdditionExample = ! isGenerateAdditionExample;
+  generateQuestion(isGenerateAdditionExample);
 
   // Очищаем поле ввода
   document.getElementById("answer").value = "";
@@ -142,4 +162,4 @@ setLanguage(currentLanguage); // Устанавливаем начальный �
 document.getElementById("submit").addEventListener("click", checkAnswer);
 
 // Начинаем с первого вопроса
-generateQuestion();
+generateQuestion(isGenerateAdditionExample);
