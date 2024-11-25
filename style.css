@@ -1,0 +1,116 @@
+/* Общий стиль для страницы */
+body {
+    font-family: "Arial", sans-serif; /* Простой и читаемый шрифт */
+    background-color: #fef6e4; /* Тёплый светлый фон */
+    color: #333; /* Контрастный тёмный текст */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Заголовок */
+  h1 {
+    font-size: 3rem; /* Крупный текст */
+    color: #ff6f61; /* Яркий оранжевый */
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Контейнер для вопроса */
+  #question {
+    font-size: 2.5rem; /* Очень крупный текст */
+    color: #3fa9f5; /* Синий */
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  /* Поле ввода */
+  #answer {
+    font-size: 2rem; /* Крупный текст */
+    padding: 10px;
+    border: 2px solid #ff6f61; /* Яркая рамка */
+    border-radius: 5px;
+    width: 60%; /* Ширина поля */
+    margin: 10px auto;
+    display: block; /* Центрируем */
+    text-align: center;
+    background-color: #fffdf9; /* Мягкий фон */
+    color: #333;
+  }
+  
+  /* Кнопка */
+  #submit {
+    font-size: 2rem; /* Крупный текст */
+    color: #fff; /* Белый текст */
+    background-color: #3fa9f5; /* Синий фон */
+    border: none;
+    border-radius: 10px; /* Скруглённые углы */
+    padding: 15px 30px;
+    margin: 20px auto;
+    display: block; /* Центрируем */
+    cursor: pointer; /* Указатель */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  /* Эффект наведения на кнопку */
+  #submit:hover {
+    background-color: #2a81d1; /* Тёмно-синий */
+    transform: scale(1.1); /* Увеличиваем кнопку */
+  }
+  
+  /* Обратная связь (правильно/неправильно) */
+  #feedback {
+    font-size: 2rem; /* Крупный текст */
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Блок статистики */
+  #statistics {
+    margin: 20px 0;
+    font-size: 1.5rem; /* Увеличенный текст */
+    text-align: center;
+  }
+  
+  /* Селектор языка */
+  #language-selector {
+    position: absolute; /* Фиксируем позицию */
+    top: 10px;
+    right: 10px;
+    background-color: #ffec99; /* Ярко-жёлтый */
+    border: 2px solid #ffcc33; /* Рамка */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+    z-index: 1000;
+  }
+  
+  #language-selector select {
+    font-size: 1.5rem; /* Крупный шрифт */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Контейнер для всей игры */
+  .container {
+    max-width: 800px; /* Ограничиваем ширину */
+    margin: 0 auto; /* Центрируем */
+    padding: 20px;
+  }
+  
+  /* Для адаптации на мобильных устройствах */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem; /* Уменьшаем размер текста */
+    }
+  
+    #question {
+      font-size: 2rem; /* Уменьшаем размер вопроса */
+    }
+  
+    #answer,
+    #submit {
+      font-size: 1.8rem; /* Уменьшаем размер шрифта */
+    }
+  }
+  
