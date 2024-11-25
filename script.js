@@ -70,7 +70,7 @@ function createConfetti() {
 // Объект переводов
 const translations = {
   en: {
-    title: "Math Trainer", // Заголовок
+    title: "Hello Maria", // Заголовок
     questionPlaceholder: "Your answer", // Подсказка в поле ввода
     submitButton: "Submit", // Текст на кнопке
     feedbackCorrect: "Correct! 🎉", // Сообщение при правильном ответе
@@ -79,7 +79,7 @@ const translations = {
     correctAnswers: "Correct answers:", // Текст статистики
   },
   ru: {
-    title: "Математический тренажёр",
+    title: "Привет Мария",
     questionPlaceholder: "Ваш ответ",
     submitButton: "Ответить",
     feedbackCorrect: "Правильно! 🎉",
@@ -88,7 +88,7 @@ const translations = {
     correctAnswers: "Правильных ответов:",
   },
   ua: {
-    title: "Математичний тренажер",
+    title: "Привіт Марія",
     questionPlaceholder: "Ваша відповідь",
     submitButton: "Відповісти",
     feedbackCorrect: "Правильно! 🎉",

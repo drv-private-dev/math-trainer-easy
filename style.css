@@ -1,7 +1,8 @@
 /* Общий стиль для страницы */
 body {
     font-family: "Arial", sans-serif; /* Простой и читаемый шрифт */
-    background-color: #fef6e4; /* Тёплый светлый фон */
+    /* background-color: #fef6e4; Тёплый светлый фон */
+    background: linear-gradient(to right, #5fffea, #7ba4fe);
     color: #333; /* Контрастный тёмный текст */
     margin: 0;
     padding: 0;
@@ -10,7 +11,7 @@ body {
   /* Заголовок */
   h1 {
     font-size: 3rem; /* Крупный текст */
-    color: #ff6f61; /* Яркий оранжевый */
+    color: #ff61a3; /* Яркий оранжевый */
     text-align: center;
     margin-top: 20px;
   }
@@ -18,7 +19,7 @@ body {
   /* Контейнер для вопроса */
   #question {
     font-size: 2.5rem; /* Очень крупный текст */
-    color: #3fa9f5; /* Синий */
+    color: #f5f12b; /* Синий */
     text-align: center;
     margin: 20px 0;
   }
