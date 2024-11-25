@@ -3,6 +3,9 @@ let totalQuestions = 0;
 let correctAnswers = 0;
 let currentQuestion = {};
 
+const correctSound = new Audio('correct.mp3');
+const wrongSound = new Audio('wrong.mp3');
+
 // Генерация нового примера
 function generateQuestion() {
   const num1 = Math.floor(Math.random() * 10);
@@ -35,11 +38,15 @@ function checkAnswer() {
     feedback.textContent = translations[currentLanguage].feedbackCorrect; // Сообщение о правильном ответе
     feedback.style.color = "green";
 
+    correctSound.play();
+
     // Анимация шариков
     createConfetti();
   } else {
     feedback.textContent = translations[currentLanguage].feedbackWrong; // Сообщение о неверном ответе
     feedback.style.color = "red";
+
+    wrongSound.play();
   }
 
   // Обновляем статистику
